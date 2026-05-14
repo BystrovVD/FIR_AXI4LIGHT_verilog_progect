@@ -1,0 +1,35 @@
+regfile coeff_rf {
+    name = "coeffs for calc block";
+
+    reg coeff_reg {
+        name = "coef reg";
+        desc = "16 bit number and wr_en";
+
+        field {
+            name = "coeff value";
+            sw = w;
+            hw = r;
+        } val[16] = 0;
+
+        field {
+            name = "wr_en";
+            sw = w;
+            hw = r;
+            singlepulse = true;
+        } wr_en[1] = 0;
+
+        field {
+            name = "wr_addr";
+            sw = w;
+            hw = r;
+        } wr_addr[7] = 0;
+
+        field {
+            name = "max_coef_num";
+            sw = w;
+            hw = r;
+        } max_coef_num[7] = 0;
+    };
+
+    coeff_reg COEFF;
+};

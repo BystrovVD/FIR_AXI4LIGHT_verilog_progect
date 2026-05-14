@@ -1,0 +1,4 @@
+addrmap coeff_map {
+    name = "address map file";
+    coeff_rf COEFF_BLOCK @ 0x0;
+};
